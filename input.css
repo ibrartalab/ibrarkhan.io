@@ -1,34 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Babylonica&family=Protest+Guerrilla&display=swap");
+/*----------------Colors------------------*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   font-family: "Roboto", sans-serif;
+  background-color: #774936;
+}
+html h1,
+body h1 {
+  font-family: "Babylonica", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
-/* Colors*/
-/* Dark Mode and Light Mode*/
-/* Navbar */
+/*------------------Navbar--------------------------*/
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #4361ee;
+  width: 100%;
+  height: 60px;
+  background-color: #ff7b00;
+  padding-inline-start: 40px;
+  padding-inline-end: 40px;
 }
-.nav-wrapper #logo {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #000000;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+.nav-wrapper #logo img {
+  width: 80px;
 }
-.nav-wrapper nav ul :is(li, a) {
+.nav-wrapper nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+.nav-wrapper nav ul li {
   list-style: none;
-  display: inline-block;
+  width: 50px;
+}
+.nav-wrapper nav ul a {
   text-decoration: none;
-  margin-inline: 8px;
+  font-size: medium;
+  padding: 8px;
+}
+.nav-wrapper nav ul a:hover {
+  padding: 8px;
+  border-radius: 50px;
+  animation: bg-slider 1s ease-in;
+}
+@keyframes bg-slider {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.primary-btn {
+  border: none;
+  width: 100px;
+  height: 30px;
+  padding: 4px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.outline-btn {
+  width: 100px;
+  height: 30px;
+  padding: 4px;
+  border-radius: 8px;
+  cursor: pointer;
 }/*# sourceMappingURL=input.css.map */

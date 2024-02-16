@@ -1,41 +1,115 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Protest+Guerrilla&display=swap');
+
+/*----------------Colors------------------*/
+$NAV-BG:#ff7b00;
+$BG-:#774936;
+
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html, body{
+
+html,
+body {
     height: 100%;
     width: 100%;
     font-family: 'Roboto', sans-serif;
+    background-color: $BG-;
+   
 
-    
+    h1 {
+        font-family: "Babylonica", cursive;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+
 }
 
-/* Colors*/
-$bg-light: #4361ee;
-
-/* Dark Mode and Light Mode*/
-
-
-/* Navbar */
-.nav-wrapper{
-    display: flex ;
+/*------------------Navbar--------------------------*/
+.nav-wrapper {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $bg-light;
+    width: 100%;
+    height: 60px;
+    background-color: $NAV-BG;
+    
+    padding-inline-start: 40px;
+    padding-inline-end: 40px;
 
-    #logo{
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #000000;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-    nav ul :is(li,a){
-        list-style: none;
-        display: inline-block;
-        text-decoration: none;
-        margin-inline: 8px;
+
+    #logo img{
+        width: 80px;
     }
 
+    nav ul {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+
+        text-align: center;
+
+        li {
+            list-style: none;
+            width: 50px;
+
+        }
+
+        a {
+            text-decoration: none;
+            font-size: medium;
+            padding: 8px;
+        }
+
+        a:hover {
+            // color: $text-light;
+            // background-color: $button-bg;
+            padding: 8px;
+            border-radius: 50px;
+            animation: bg-slider 1s ease-in;
+        }
+
+        @keyframes bg-slider {
+            0% {
+                transform: translateX(-100%);
+                // background: $bg-light;
+            }
+
+            100% {
+                transform: translateX(0);
+                // background-color: $button-bg;
+                // color: $text-light;
+            }
+        }
+
+    }
+
+}
+
+.primary-btn {
+    // background-color: $button-bg;
+    border: none;
+    // color: $text-dark;
+    width: 100px;
+    height: 30px;
+    padding: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.outline-btn {
+    // border: 1px solid $button-bg;
+    // color: $text-light;
+    width: 100px;
+    height: 30px;
+    padding: 4px;
+    border-radius: 8px;
+    cursor: pointer;
 }
