@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Colors*/
+/* Dark Mode and Light Mode*/
+/* Navbar */
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4361ee;
+}
+.nav-wrapper #logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.nav-wrapper nav ul :is(li, a) {
+  list-style: none;
+  display: inline-block;
+  text-decoration: none;
+  margin-inline: 8px;
+}/*# sourceMappingURL=input.css.map */
