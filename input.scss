@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Protest+Guerrilla&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 /*----------------Colors------------------*/
-$NAV-BG:#ff7b00;
-$BG-:#774936;
-
+$NAV-BG: #000000;
+$bg-black: #000000;
+$bg-light: white;
+$text-black: black;
+$text-light: white;
+$button-bg: rgb(111, 54, 255);
 
 * {
     margin: 0;
@@ -15,17 +17,9 @@ html,
 body {
     height: 100%;
     width: 100%;
-    font-family: 'Roboto', sans-serif;
-    background-color: $BG-;
-   
-
-    h1 {
-        font-family: "Babylonica", cursive;
-        font-weight: 400;
-        font-style: normal;
-    }
-
-
+    font-family: sans-serif;
+    background-color: $bg-black;
+    color: $text-light;
 }
 
 /*------------------Navbar--------------------------*/
@@ -36,13 +30,16 @@ body {
     width: 100%;
     height: 60px;
     background-color: $NAV-BG;
-    
+
     padding-inline-start: 40px;
     padding-inline-end: 40px;
 
 
-    #logo img{
-        width: 80px;
+    #logo {
+        font-family: sans-serif;
+        font-size: 3rem;
+        width: 100px;
+        height: 50px;
     }
 
     nav ul {
@@ -66,6 +63,7 @@ body {
             text-decoration: none;
             font-size: medium;
             padding: 8px;
+            color: $text-light;
         }
 
         a:hover {
@@ -93,10 +91,62 @@ body {
 
 }
 
+/* Main Section */
+.main-wrapper {
+    .hero {
+        height: 600px;
+        // margin-left: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .col-1 {
+            letter-spacing: normal;
+            line-height: normal;
+
+
+            :is(h1, h2) {
+                font-family: "Comfortaa", sans-serif;
+                justify-self: flex-end;
+               
+
+            }
+
+            & h1 {
+                font-size: 4rem;
+                width: 100px;
+                padding-top: 80px;
+                p {
+                    font-size: 20rem;
+                    color: #c8ff00;
+                    font-weight: 600;
+                    font-family: "Montserrat", sans-serif;
+                }
+            }
+
+            
+        }
+
+        .col-2 {
+            p {
+                font-size: 42rem;
+                color: #c8ff00;
+                font-weight: bold;
+                font-family: 'Rubik';
+            }
+        }
+
+
+
+    }
+}
+
+
+/* Buttons */
 .primary-btn {
-    // background-color: $button-bg;
+    background-color: $button-bg;
     border: none;
-    // color: $text-dark;
+    color: $text-black;
     width: 100px;
     height: 30px;
     padding: 4px;
