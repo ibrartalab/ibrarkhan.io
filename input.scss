@@ -24,22 +24,35 @@ body {
 
 /*------------------Navbar--------------------------*/
 .nav-wrapper {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
     width: 100%;
     height: 60px;
     background-color: $NAV-BG;
     padding-inline-start: 40px;
     padding-inline-end: 40px;
 
+    .humburger-wrapper{
+        display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 25px;
+   
+    }
     .humburger-icon {
         width: 40px;
         height: 40px;
         border-radius: 50px;
+        margin-top: 10px;
         position: relative;
         background-color: $button-bg;
         position: fixed;
+        cursor: pointer;
+        
+
+        &:hover{
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
         &::before {
             content: '';
             border-bottom: 1px solid white;
@@ -61,44 +74,61 @@ body {
         }
     }
 
-    #logo {
-        font-family: sans-serif;
-        font-size: 3rem;
-        width: 100px;
-        height: 50px;
-    }
+
 
     .nav-links-box {
         display: none;
+        position: absolute;
+        top: 9.5px;
+        right: 70px;
+        background-color: $button-bg;
+        height: 40px;
+        width: 400px;
+        overflow: hidden;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        animation: rl-move 1s ease;
+
+        @keyframes rl-move {
+            from{
+                transition: width;
+                width:0px;
+            }
+            to{
+                transition: width;
+                width: 400px;
+            }
+        }
+    
     }
+
 
     nav ul {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
-        gap: 30px;
-
-
+        gap: 20px;
         text-align: center;
 
         li {
             list-style: none;
             width: 50px;
+            padding-top: 10px;
+            padding-inline-start: 15px;
 
         }
 
         a {
             text-decoration: none;
             font-size: medium;
-            padding: 8px;
             color: $text-light;
         }
 
         a:hover {
             color: $text-light;
             // background-color: $button-bg;
-            padding: 8px;
+            // padding: 8px;
             border-radius: 50px;
             animation: bg-slider 1s ease-in;
         }
@@ -139,6 +169,47 @@ body {
             font-weight: 100;
 
         }
+        .col-1::first-letter ,.col-2::first-letter{
+            color: $button-bg;
+        }
+        .col-3 :is(h2):first-letter{
+            color: $button-bg;
+        }
+        .col-3{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+  
+            i{
+                rotate: 270deg;
+                font-size: 1.5rem;
+            }
+            .move-down{
+                rotate: 90deg;
+                background: none;
+                color: $text-light;
+                border: none;
+
+                
+                i{
+                    font-size: 2rem;
+                    cursor: pointer;
+                    animation: beat 3s linear infinite;
+                }
+                @keyframes beat {
+                    0%{
+                        transform: translateY(0);
+                    }
+                    50%{
+                        transform: translateY(100%);
+                        color: $button-bg;
+                    }
+                    100%{
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -156,11 +227,23 @@ body {
 }
 
 .outline-btn {
-    // border: 1px solid $button-bg;
-    // color: $text-light;
+    border: 1px solid $button-bg;
+    color: $text-light;
+    background: none;
     width: 100px;
     height: 30px;
     padding: 4px;
     border-radius: 8px;
     cursor: pointer;
+}
+.outline-btn-hire{
+    height: 30px;
+    width: 150PX;
+    border-radius: 50px;
+    padding: 8px;
+    margin-inline-end: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
 }

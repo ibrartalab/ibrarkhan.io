@@ -17,22 +17,31 @@ body {
 
 /*------------------Navbar--------------------------*/
 .nav-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
   width: 100%;
   height: 60px;
   background-color: #000000;
   padding-inline-start: 40px;
   padding-inline-end: 40px;
 }
+.nav-wrapper .humburger-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 25px;
+}
 .nav-wrapper .humburger-icon {
   width: 40px;
   height: 40px;
   border-radius: 50px;
+  margin-top: 10px;
   position: relative;
   background-color: rgb(111, 54, 255);
   position: fixed;
+  cursor: pointer;
+}
+.nav-wrapper .humburger-icon:hover {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .nav-wrapper .humburger-icon::before {
   content: "";
@@ -52,36 +61,50 @@ body {
   top: 20px;
   margin-left: 13px;
 }
-.nav-wrapper #logo {
-  font-family: sans-serif;
-  font-size: 3rem;
-  width: 100px;
-  height: 50px;
-}
 .nav-wrapper .nav-links-box {
   display: none;
+  position: absolute;
+  top: 9.5px;
+  right: 70px;
+  background-color: rgb(111, 54, 255);
+  height: 40px;
+  width: 400px;
+  overflow: hidden;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  animation: rl-move 1s ease;
+}
+@keyframes rl-move {
+  from {
+    transition: width;
+    width: 0px;
+  }
+  to {
+    transition: width;
+    width: 400px;
+  }
 }
 .nav-wrapper nav ul {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   text-align: center;
 }
 .nav-wrapper nav ul li {
   list-style: none;
   width: 50px;
+  padding-top: 10px;
+  padding-inline-start: 15px;
 }
 .nav-wrapper nav ul a {
   text-decoration: none;
   font-size: medium;
-  padding: 8px;
   color: white;
 }
 .nav-wrapper nav ul a:hover {
   color: white;
-  padding: 8px;
   border-radius: 50px;
   animation: bg-slider 1s ease-in;
 }
@@ -110,6 +133,44 @@ body {
   font-size: 10rem;
   font-weight: 100;
 }
+.main-wrapper .hero .col-1::first-letter, .main-wrapper .hero .col-2::first-letter {
+  color: rgb(111, 54, 255);
+}
+.main-wrapper .hero .col-3 :is(h2):first-letter {
+  color: rgb(111, 54, 255);
+}
+.main-wrapper .hero .col-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-wrapper .hero .col-3 i {
+  rotate: 270deg;
+  font-size: 1.5rem;
+}
+.main-wrapper .hero .col-3 .move-down {
+  rotate: 90deg;
+  background: none;
+  color: white;
+  border: none;
+}
+.main-wrapper .hero .col-3 .move-down i {
+  font-size: 2rem;
+  cursor: pointer;
+  animation: beat 3s linear infinite;
+}
+@keyframes beat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(100%);
+    color: rgb(111, 54, 255);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 /* Buttons */
 .primary-btn {
@@ -124,9 +185,24 @@ body {
 }
 
 .outline-btn {
+  border: 1px solid rgb(111, 54, 255);
+  color: white;
+  background: none;
   width: 100px;
   height: 30px;
   padding: 4px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.outline-btn-hire {
+  height: 30px;
+  width: 150PX;
+  border-radius: 50px;
+  padding: 8px;
+  margin-inline-end: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
 }/*# sourceMappingURL=input.css.map */
