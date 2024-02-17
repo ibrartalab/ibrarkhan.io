@@ -25,15 +25,41 @@ body {
 /*------------------Navbar--------------------------*/
 .nav-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
     height: 60px;
     background-color: $NAV-BG;
-
     padding-inline-start: 40px;
     padding-inline-end: 40px;
 
+    .humburger-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        position: relative;
+        background-color: $button-bg;
+        position: fixed;
+        &::before {
+            content: '';
+            border-bottom: 1px solid white;
+            width: 22px;
+            position: absolute;
+            top: 10px;
+            margin-left: 10px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            border-bottom: 1px solid white;
+            border-top:1px solid white ;
+            width: 15px;
+            height: 10px;
+            top: 20px;
+            margin-left: 13px;
+        }
+    }
 
     #logo {
         font-family: sans-serif;
@@ -42,8 +68,11 @@ body {
         height: 50px;
     }
 
-    nav ul {
+    .nav-links-box {
+        display: none;
+    }
 
+    nav ul {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -67,7 +96,7 @@ body {
         }
 
         a:hover {
-            // color: $text-light;
+            color: $text-light;
             // background-color: $button-bg;
             padding: 8px;
             border-radius: 50px;
@@ -95,49 +124,21 @@ body {
 .main-wrapper {
     .hero {
         height: 600px;
-        // margin-left: 200px;
+        margin-left: 20px;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: left;
+        align-items: left;
+        flex-direction: column;
+        text-align: left;
+        
 
-        .col-1 {
-            letter-spacing: normal;
-            line-height: normal;
+        & :is(h1, h2) {
+            font-family: "Comfortaa", sans-serif;
+            text-align: left;
+            font-size: 10rem;
+            font-weight: 100;
 
-
-            :is(h1, h2) {
-                font-family: "Comfortaa", sans-serif;
-                justify-self: flex-end;
-               
-
-            }
-
-            & h1 {
-                font-size: 4rem;
-                width: 100px;
-                padding-top: 80px;
-                p {
-                    font-size: 20rem;
-                    color: #c8ff00;
-                    font-weight: 600;
-                    font-family: "Montserrat", sans-serif;
-                }
-            }
-
-            
         }
-
-        .col-2 {
-            p {
-                font-size: 42rem;
-                color: #c8ff00;
-                font-weight: bold;
-                font-family: 'Rubik';
-            }
-        }
-
-
-
     }
 }
 
