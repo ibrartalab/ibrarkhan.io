@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Orbitron:wght@400..900&display=swap");
 /*----------------Colors------------------*/
 * {
   margin: 0;
@@ -11,7 +11,7 @@ body {
   height: 100%;
   width: 100%;
   font-family: sans-serif;
-  background-color: #000000;
+  background-color: #edede9;
   color: #f8f9fa;
 }
 
@@ -128,10 +128,19 @@ body {
   text-align: left;
 }
 .main-wrapper .hero :is(h1, h2) {
-  font-family: "Comfortaa", sans-serif;
+  font-family: "Orbitron", sans-serif;
   text-align: left;
   font-size: 10rem;
   font-weight: 100;
+  animation: left-appear 3s ease;
+}
+@keyframes left-appear {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 .main-wrapper .hero .col-1::first-letter,
 .main-wrapper .hero .col-2::first-letter {
@@ -181,7 +190,6 @@ body {
 .main-wrapper .skills .shadow-box {
   width: 50%;
   height: 50%;
-  box-shadow: inset 0 0 10px white;
   margin: auto;
   margin-top: 25px;
   border-radius: 20px;
@@ -194,9 +202,9 @@ body {
   align-items: center;
   gap: 10px;
   height: 50%;
-  width: 500px;
+  width: 900px;
   padding-top: 22px;
-  animation: skills-move 15s linear infinite;
+  animation: skills-move 30s linear infinite;
 }
 .main-wrapper .skills .shadow-box ul li {
   list-style: none;
@@ -205,7 +213,7 @@ body {
   height: -moz-max-content;
   height: max-content;
   padding: 8px;
-  color: black;
+  color: rgb(198, 198, 198);
   font-size: 15px;
 }
 @keyframes skills-move {
@@ -216,13 +224,61 @@ body {
     transform: translateX(100%);
   }
 }
+.main-wrapper .about {
+  height: 500px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline-start: 40px;
+}
+.main-wrapper .about .about-title {
+  text-align: center;
+  font-size: 3rem;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background: rgb(0, 0, 0);
+  color: rgb(198, 198, 198);
+  padding-top: 55px;
+  line-height: 1;
+  box-shadow: 0px 0px 20px #9000ff;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  background-image: url("/profile2.png");
+}
+.main-wrapper .about .about-me {
+  text-align: center;
+  width: 500px;
+  height: 500px;
+  background: #952fee;
+  border-radius: 100%;
+  margin: auto;
+  font-size: 1.3rem;
+}
+.main-wrapper .about .about-me p {
+  width: 70%;
+  height: 100%;
+  margin: 10% 0 0 15%;
+}
+.main-wrapper .line {
+  border-bottom: 1px dashed white;
+  position: absolute;
+  top: 50%;
+  left: 17.5%;
+  width: 300px;
+  height: 10px;
+}
 
 /*-------------------------------------------------*/
 /* Buttons */
 .primary-btn {
   background-color: #952fee;
   border: none;
-  color: black;
+  color: rgb(198, 198, 198);
   width: 100px;
   height: 30px;
   padding: 4px;
