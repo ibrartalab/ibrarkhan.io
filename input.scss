@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Orbitron:wght@400..900&display=swap');
 /*----------------Colors------------------*/
-
-$bg-black: #edede9;
-$bg-light: rgb(0, 0, 0);
-$text-black: rgb(198, 198, 198);
-$text-light: #f8f9fa;
-$button-bg: #952fee;
+$bgColor: #edede9;
+$secondryBgColor: #c4c4c4;
+$textLight: #c4c4c4;
+$textBlack: #242323;
 
 
 * {
@@ -18,9 +16,13 @@ html,
 body {
     height: 100%;
     width: 100%;
-    font-family: sans-serif;
-    background-color: $bg-black;
-    color: $text-light;
+    font-family: 'Comfortaa';
+    background-color: $bgColor;
+    color: $textBlack;
+
+    h3{
+        font-family: "Orbitron";
+    }
 }
 
 /*------------------Navbar--------------------------*/
@@ -29,6 +31,7 @@ body {
     height: 60px;
     padding-inline-start: 40px;
     padding-inline-end: 40px;
+
 
     .humburger-wrapper {
         display: flex;
@@ -44,9 +47,10 @@ body {
         border-radius: 50px;
         margin-top: 10px;
         position: relative;
-        background-color: $button-bg;
+        background-color: $textBlack;
         position: fixed;
         cursor: pointer;
+        z-index: 5;
 
 
         &:hover {
@@ -56,7 +60,7 @@ body {
 
         &::before {
             content: '';
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid $textLight;
             width: 22px;
             position: absolute;
             top: 10px;
@@ -66,8 +70,8 @@ body {
         &::after {
             content: '';
             position: absolute;
-            border-bottom: 1px solid white;
-            border-top: 1px solid white;
+            border-bottom: 1px solid $textLight;
+            border-top: 1px solid $textLight;
             width: 15px;
             height: 10px;
             top: 20px;
@@ -82,7 +86,7 @@ body {
         position: absolute;
         top: 9.5px;
         right: 70px;
-        background-color: $button-bg;
+        background-color: black;
         height: 40px;
         width: 400px;
         overflow: hidden;
@@ -124,11 +128,11 @@ body {
         a {
             text-decoration: none;
             font-size: medium;
-            color: $text-light;
+            color: $textLight;
         }
 
         a:hover {
-            color: $text-light;
+            color: $textLight;
             // background-color: $button-bg;
             // padding: 8px;
             border-radius: 50px;
@@ -186,11 +190,11 @@ body {
 
         .col-1::first-letter,
         .col-2::first-letter {
-            color: $button-bg;
+            color: $textBlack;
         }
 
         .col-3 :is(h2):first-letter {
-            color: $button-bg;
+            color: $textBlack;
         }
 
         .col-3 {
@@ -206,7 +210,7 @@ body {
             .move-down {
                 rotate: 90deg;
                 background: none;
-                color: $text-light;
+                color: $textLight;
                 border: none;
 
 
@@ -223,7 +227,7 @@ body {
 
                     50% {
                         transform: translateY(100%);
-                        color: $button-bg;
+                        color: $textBlack;
                     }
 
                     100% {
@@ -237,9 +241,9 @@ body {
     .skills {
         height: 100px;
         width: 100%;
-        background: linear-gradient(to right, $button-bg, #ffffffdb, $button-bg);
+        background: linear-gradient(to right, $textBlack, #ffffffdb);
         overflow: hidden;
-        // box-shadow: inset 0 0 10px white;
+        margin-top: 20px;
 
         .shadow-box {
             width: 50%;
@@ -269,7 +273,7 @@ body {
                     // border: 1px solid $text-light;
                     // border-radius: 40px;
                     padding: 8px;
-                    color: $text-black;
+                    color: $textLight;
                     font-size: 15px;
 
 
@@ -299,62 +303,40 @@ body {
         align-items: center;
         padding-inline-start: 40px;
 
-
-        .title-container{}
-
         .about-title {
-            text-align: center;
-            font-size: 3rem;
-            width: 200px;
-            height: 200px;
-            border-radius: 100%;
-            background: $bg-light;
-            color: $text-black;
-            padding-top: 55px;
-            line-height: 1;
-            box-shadow: 0px 0px 20px #9000ff;
+            background-image: url('/assets/ik.png');
             object-fit: cover;
             background-size: cover;
-            background-image: url('/profile2.png');
+            border-radius: 100%;
+            border-top-left-radius: 10px;
+            background-color: $secondryBgColor;
+            width: 200px;
+            height: 200px;
 
         }
 
         .about-me {
-            text-align: center;
-            width: 500px;
-            height: 500px;
-            background: $button-bg;
-            border-radius: 100%;
-            margin: auto;
-
-
-            font-size: 1.3rem;
-
-            p {
-                width: 70%;
-                height: 100%;
-                margin: 10% 0 0 15%;
-
-            }
+            font-size: 2.5rem;
+            width: 70%;
         }
     }
 
-    .line {
-        border-bottom: 1px dashed white;
-        position: absolute;
-        top: 50%;
-        left: 17.5%;
-        width: 300px;
-        height: 10px;
-    }
+    // .line {
+    //     border-bottom: 1px dashed white;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 17.5%;
+    //     width: 300px;
+    //     height: 10px;
+    // }
 }
 
 /*-------------------------------------------------*/
 /* Buttons */
 .primary-btn {
-    background-color: $button-bg;
+    background-color: $textBlack;
     border: none;
-    color: $text-black;
+    color: $textLight;
     width: 100px;
     height: 30px;
     padding: 4px;
@@ -363,8 +345,8 @@ body {
 }
 
 .outline-btn {
-    border: 1px solid $button-bg;
-    color: $text-light;
+    border: 1px solid $textBlack;
+    color: $textBlack;
     background: none;
     width: 100px;
     height: 30px;

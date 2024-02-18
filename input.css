@@ -10,9 +10,13 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family: sans-serif;
+  font-family: "Comfortaa";
   background-color: #edede9;
-  color: #f8f9fa;
+  color: #242323;
+}
+html h3,
+body h3 {
+  font-family: "Orbitron";
 }
 
 /*------------------Navbar--------------------------*/
@@ -34,9 +38,10 @@ body {
   border-radius: 50px;
   margin-top: 10px;
   position: relative;
-  background-color: #952fee;
+  background-color: #242323;
   position: fixed;
   cursor: pointer;
+  z-index: 5;
 }
 .nav-wrapper .humburger-icon:hover {
   border-top-left-radius: 0;
@@ -44,7 +49,7 @@ body {
 }
 .nav-wrapper .humburger-icon::before {
   content: "";
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #c4c4c4;
   width: 22px;
   position: absolute;
   top: 10px;
@@ -53,8 +58,8 @@ body {
 .nav-wrapper .humburger-icon::after {
   content: "";
   position: absolute;
-  border-bottom: 1px solid white;
-  border-top: 1px solid white;
+  border-bottom: 1px solid #c4c4c4;
+  border-top: 1px solid #c4c4c4;
   width: 15px;
   height: 10px;
   top: 20px;
@@ -65,7 +70,7 @@ body {
   position: absolute;
   top: 9.5px;
   right: 70px;
-  background-color: #952fee;
+  background-color: black;
   height: 40px;
   width: 400px;
   overflow: hidden;
@@ -100,10 +105,10 @@ body {
 .nav-wrapper nav ul a {
   text-decoration: none;
   font-size: medium;
-  color: #f8f9fa;
+  color: #c4c4c4;
 }
 .nav-wrapper nav ul a:hover {
-  color: #f8f9fa;
+  color: #c4c4c4;
   border-radius: 50px;
   animation: bg-slider 1s ease-in;
 }
@@ -144,10 +149,10 @@ body {
 }
 .main-wrapper .hero .col-1::first-letter,
 .main-wrapper .hero .col-2::first-letter {
-  color: #952fee;
+  color: #242323;
 }
 .main-wrapper .hero .col-3 :is(h2):first-letter {
-  color: #952fee;
+  color: #242323;
 }
 .main-wrapper .hero .col-3 {
   display: flex;
@@ -161,7 +166,7 @@ body {
 .main-wrapper .hero .col-3 .move-down {
   rotate: 90deg;
   background: none;
-  color: #f8f9fa;
+  color: #c4c4c4;
   border: none;
 }
 .main-wrapper .hero .col-3 .move-down i {
@@ -175,7 +180,7 @@ body {
   }
   50% {
     transform: translateY(100%);
-    color: #952fee;
+    color: #242323;
   }
   100% {
     transform: translateY(0);
@@ -184,8 +189,9 @@ body {
 .main-wrapper .skills {
   height: 100px;
   width: 100%;
-  background: linear-gradient(to right, #952fee, rgba(255, 255, 255, 0.8588235294), #952fee);
+  background: linear-gradient(to right, #242323, rgba(255, 255, 255, 0.8588235294));
   overflow: hidden;
+  margin-top: 20px;
 }
 .main-wrapper .skills .shadow-box {
   width: 50%;
@@ -213,7 +219,7 @@ body {
   height: -moz-max-content;
   height: max-content;
   padding: 8px;
-  color: rgb(198, 198, 198);
+  color: #c4c4c4;
   font-size: 15px;
 }
 @keyframes skills-move {
@@ -235,50 +241,27 @@ body {
   padding-inline-start: 40px;
 }
 .main-wrapper .about .about-title {
-  text-align: center;
-  font-size: 3rem;
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-  background: rgb(0, 0, 0);
-  color: rgb(198, 198, 198);
-  padding-top: 55px;
-  line-height: 1;
-  box-shadow: 0px 0px 20px #9000ff;
+  background-image: url("/assets/ik.png");
   -o-object-fit: cover;
      object-fit: cover;
   background-size: cover;
-  background-image: url("/profile2.png");
+  border-radius: 100%;
+  border-top-left-radius: 10px;
+  background-color: #c4c4c4;
+  width: 200px;
+  height: 200px;
 }
 .main-wrapper .about .about-me {
-  text-align: center;
-  width: 500px;
-  height: 500px;
-  background: #952fee;
-  border-radius: 100%;
-  margin: auto;
-  font-size: 1.3rem;
-}
-.main-wrapper .about .about-me p {
+  font-size: 2.5rem;
   width: 70%;
-  height: 100%;
-  margin: 10% 0 0 15%;
-}
-.main-wrapper .line {
-  border-bottom: 1px dashed white;
-  position: absolute;
-  top: 50%;
-  left: 17.5%;
-  width: 300px;
-  height: 10px;
 }
 
 /*-------------------------------------------------*/
 /* Buttons */
 .primary-btn {
-  background-color: #952fee;
+  background-color: #242323;
   border: none;
-  color: rgb(198, 198, 198);
+  color: #c4c4c4;
   width: 100px;
   height: 30px;
   padding: 4px;
@@ -287,8 +270,8 @@ body {
 }
 
 .outline-btn {
-  border: 1px solid #952fee;
-  color: #f8f9fa;
+  border: 1px solid #242323;
+  color: #242323;
   background: none;
   width: 100px;
   height: 30px;
