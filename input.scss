@@ -20,8 +20,9 @@ body {
     background-color: $bgColor;
     color: $textBlack;
 
-    h3{
-        font-family: "Orbitron";
+    h3 {
+        font-family: "Comfortaa";
+        font-size: 2rem;
     }
 }
 
@@ -329,6 +330,90 @@ body {
     //     width: 300px;
     //     height: 10px;
     // }
+
+    .project-wrapper {
+        div>h3 {
+
+            margin-block: 30px;
+            margin-left: 40px;
+        }
+
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 2;
+            height: 400px;
+            width: 80%;
+            margin: auto;
+            // background-color: #fff;
+            padding-inline-start: 40px;
+            padding-inline-end: 40px;
+            gap: 10px;
+
+
+            div {
+                border-radius: 30px;
+                background: linear-gradient(to bottom, $textBlack, $textLight);
+            }
+
+            .one {
+                grid-column: span 2;
+            }
+
+            .two {
+                grid-row: span 2;
+                grid-column: span 2;
+            }
+
+            .four {
+                grid-column: 1;
+            }
+
+        }
+    }
+}
+
+/*----------------Footer--------------------------------------*/
+.footer-wrapper {
+    width: 100%;
+    height: 400px;
+    margin-top: 60px;
+
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $textBlack;
+        height: 300px;
+        padding-inline-start: 40px;
+        padding-inline-end: 40px;
+
+        .f-col-1 {
+            div {
+                font-family: "Orbitron", sans-serif;
+                font-size: 1.5rem;
+                color: $textLight;
+            }
+        }
+
+        .f-col-2 {
+            margin-top: 56px;
+            :is(li, a) {
+                list-style: none;
+                color: $textLight;
+                text-decoration: none;
+                padding-block: 6px;
+            }
+        }
+
+
+        .f-col-3 li {
+            list-style: none;
+            color: $textLight;
+            padding-block: 6px;
+        }
+    }
+
 }
 
 /*-------------------------------------------------*/

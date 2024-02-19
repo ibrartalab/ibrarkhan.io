@@ -16,7 +16,8 @@ body {
 }
 html h3,
 body h3 {
-  font-family: "Orbitron";
+  font-family: "Comfortaa";
+  font-size: 2rem;
 }
 
 /*------------------Navbar--------------------------*/
@@ -254,6 +255,70 @@ body h3 {
 .main-wrapper .about .about-me {
   font-size: 2.5rem;
   width: 70%;
+}
+.main-wrapper .project-wrapper div > h3 {
+  margin-block: 30px;
+  margin-left: 40px;
+}
+.main-wrapper .project-wrapper .project-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 2;
+  height: 400px;
+  width: 80%;
+  margin: auto;
+  padding-inline-start: 40px;
+  padding-inline-end: 40px;
+  gap: 10px;
+}
+.main-wrapper .project-wrapper .project-container div {
+  border-radius: 30px;
+  background: linear-gradient(to bottom, #242323, #c4c4c4);
+}
+.main-wrapper .project-wrapper .project-container .one {
+  grid-column: span 2;
+}
+.main-wrapper .project-wrapper .project-container .two {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.main-wrapper .project-wrapper .project-container .four {
+  grid-column: 1;
+}
+
+/*----------------Footer--------------------------------------*/
+.footer-wrapper {
+  width: 100%;
+  height: 400px;
+  margin-top: 60px;
+}
+.footer-wrapper .footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #242323;
+  height: 300px;
+  padding-inline-start: 40px;
+  padding-inline-end: 40px;
+}
+.footer-wrapper .footer-top .f-col-1 div {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.5rem;
+  color: #c4c4c4;
+}
+.footer-wrapper .footer-top .f-col-2 {
+  margin-top: 56px;
+}
+.footer-wrapper .footer-top .f-col-2 :is(li, a) {
+  list-style: none;
+  color: #c4c4c4;
+  text-decoration: none;
+  padding-block: 6px;
+}
+.footer-wrapper .footer-top .f-col-3 li {
+  list-style: none;
+  color: #c4c4c4;
+  padding-block: 6px;
 }
 
 /*-------------------------------------------------*/
