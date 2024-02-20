@@ -4,6 +4,7 @@ $bgColor: #edede9;
 $secondryBgColor: #c4c4c4;
 $textLight: #c4c4c4;
 $textBlack: #242323;
+$button: rgb(213, 255, 1);
 
 
 * {
@@ -384,9 +385,20 @@ body {
         justify-content: space-between;
         align-items: center;
         background: $textBlack;
-        height: 300px;
+        height: 90%;
         padding-inline-start: 40px;
         padding-inline-end: 40px;
+
+        li:first-child {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        li{
+            font-size: small;
+            
+        }
+        
 
         .f-col-1 {
             div {
@@ -398,20 +410,37 @@ body {
 
         .f-col-2 {
             margin-top: 56px;
+
             :is(li, a) {
                 list-style: none;
                 color: $textLight;
                 text-decoration: none;
                 padding-block: 6px;
             }
+            :is(a):hover{
+                color:$button;
+                text-decoration: underline;
+            }
         }
 
-
-        .f-col-3 li {
+        .f-col-3 li,a {
             list-style: none;
             color: $textLight;
             padding-block: 6px;
+            text-decoration: none;
+
+            :hover{
+                color: $button;
+                text-decoration: underline;
+            }
         }
+    }
+
+    .footer-bottom {
+        text-align: center;
+        height: 9vh;
+        line-height: 9vh;
+        color: $textBlack;
     }
 
 }

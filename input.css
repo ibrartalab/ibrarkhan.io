@@ -297,9 +297,16 @@ body h3 {
   justify-content: space-between;
   align-items: center;
   background: #242323;
-  height: 300px;
+  height: 90%;
   padding-inline-start: 40px;
   padding-inline-end: 40px;
+}
+.footer-wrapper .footer-top li:first-child {
+  font-weight: bold;
+  font-size: 20px;
+}
+.footer-wrapper .footer-top li {
+  font-size: small;
 }
 .footer-wrapper .footer-top .f-col-1 div {
   font-family: "Orbitron", sans-serif;
@@ -315,10 +322,25 @@ body h3 {
   text-decoration: none;
   padding-block: 6px;
 }
-.footer-wrapper .footer-top .f-col-3 li {
+.footer-wrapper .footer-top .f-col-2 :is(a):hover {
+  color: rgb(213, 255, 1);
+  text-decoration: underline;
+}
+.footer-wrapper .footer-top .f-col-3 li, .footer-wrapper .footer-top a {
   list-style: none;
   color: #c4c4c4;
   padding-block: 6px;
+  text-decoration: none;
+}
+.footer-wrapper .footer-top .f-col-3 li :hover, .footer-wrapper .footer-top a :hover {
+  color: rgb(213, 255, 1);
+  text-decoration: underline;
+}
+.footer-wrapper .footer-bottom {
+  text-align: center;
+  height: 9vh;
+  line-height: 9vh;
+  color: #242323;
 }
 
 /*-------------------------------------------------*/
