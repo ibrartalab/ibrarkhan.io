@@ -4,7 +4,8 @@ $bgColor: #edede9;
 $secondryBgColor: #c4c4c4;
 $textLight: #c4c4c4;
 $textBlack: #242323;
-$button: rgb(213, 255, 1);
+$button: #d5ff01;
+$button-hover: #4d5c00d9;
 
 
 * {
@@ -55,10 +56,10 @@ body {
         z-index: 5;
 
 
-        &:hover {
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-        }
+        // &:hover {
+        //     border-top-left-radius: 0;
+        //     border-bottom-left-radius: 0;
+        // }
 
         &::before {
             content: '';
@@ -85,16 +86,22 @@ body {
 
     .nav-links-box {
         display: none;
-        position: absolute;
-        top: 9.5px;
-        right: 70px;
-        background-color: black;
-        height: 40px;
-        width: 400px;
+        position: fixed;
+        z-index: 1;
+        // top: 9.5px;
+        top: 0px;
+        // right: 70px;
+        right: 0px;
+        background-color: $button;
+        height: 300px;
+        width: 100%;
         overflow: hidden;
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
-        animation: rl-move 1s ease;
+        // border-top-left-radius: 50px;
+        // border-bottom-left-radius: 50px;
+        // border-top-left-radius: 50%;
+        // border-bottom-left-radius: 50%;
+
+        // animation: rl-move 1s ease;
 
         @keyframes rl-move {
             from {
@@ -113,11 +120,12 @@ body {
 
     nav ul {
         display: flex;
-        flex-direction: row;
-        justify-content: start;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
         gap: 20px;
         text-align: center;
+        margin-top: 50px;
 
         li {
             list-style: none;
@@ -130,7 +138,7 @@ body {
         a {
             text-decoration: none;
             font-size: medium;
-            color: $textLight;
+            color: $textBlack;
         }
 
         a:hover {
@@ -188,6 +196,27 @@ body {
                 }
             }
 
+        }
+
+        .hire-me {
+            width: 150px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-inline-start: 10px;
+            padding-inline-end: 10px;
+            font-weight: normal;
+            font-size: medium;
+            margin-right: 40px;
+
+            li {
+                font-size: 10px;
+            }
+
+            &:hover {
+                background-color: $button-hover;
+                color: $textLight;
+            }
         }
 
         .col-1::first-letter,
@@ -394,11 +423,11 @@ body {
             font-size: 20px;
         }
 
-        li{
+        li {
             font-size: small;
-            
+
         }
-        
+
 
         .f-col-1 {
             div {
@@ -417,22 +446,40 @@ body {
                 text-decoration: none;
                 padding-block: 6px;
             }
-            :is(a):hover{
-                color:$button;
-                text-decoration: underline;
-            }
-        }
 
-        .f-col-3 li,a {
-            list-style: none;
-            color: $textLight;
-            padding-block: 6px;
-            text-decoration: none;
-
-            :hover{
+            :is(a):hover {
                 color: $button;
                 text-decoration: underline;
             }
+
+            li:nth-child(5) {
+                display: flex;
+                width: 100px;
+                justify-content: space-between;
+                gap: 40px;
+            }
+
+            .fa-arrow-right {
+                rotate: -20deg;
+            }
+        }
+
+        .f-col-3 {
+
+            li,
+            a {
+                list-style: none;
+                color: $textLight;
+                padding-block: 6px;
+                text-decoration: none;
+
+                :hover {
+                    color: $button;
+                    text-decoration: underline;
+                }
+            }
+
+
         }
     }
 
@@ -448,35 +495,12 @@ body {
 /*-------------------------------------------------*/
 /* Buttons */
 .primary-btn {
-    background-color: $textBlack;
+    background-color: $button;
     border: none;
-    color: $textLight;
-    width: 100px;
-    height: 30px;
-    padding: 4px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.outline-btn {
-    border: 1px solid $textBlack;
     color: $textBlack;
-    background: none;
     width: 100px;
     height: 30px;
     padding: 4px;
     border-radius: 8px;
     cursor: pointer;
-}
-
-.outline-btn-hire {
-    height: 30px;
-    width: 150PX;
-    border-radius: 50px;
-    padding: 8px;
-    margin-inline-end: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1rem;
 }
